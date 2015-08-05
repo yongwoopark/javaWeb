@@ -178,6 +178,11 @@ body {
 	width:400px;
 }
 
+#notice td:first-child+td{
+	text-align:left;
+	text-indent:10px;	
+}
+
 #notice td:first-child+td+td,
 #notice th:first-child+th+th{
 	width:100px;
@@ -199,6 +204,38 @@ body {
 
 #notice th:first-child{
 	background: #f5f5f5;
+}
+
+
+#pager {
+	border:1px solid blue;
+	display: inline-block;
+}
+
+#pager > *{
+	float:left;
+}
+
+#pager > p{
+	width:25px;
+	height: 25px;
+	line-height: 25px;
+	border: 1px solid gray;
+}
+
+#pager ul{
+	border:1px solid red;
+	overflow: auto;	
+}
+
+#pager li
+{
+	width:25px;
+	height:25px;	
+	line-height:25px;/* 수직정렬 */
+	text-align: center;/* 수평정렬 */
+	border:1px solid gray;
+	float:left;	
 }
 
 /*---------------------------------------- 
@@ -404,8 +441,9 @@ body {
 					<p>1 of 3pages</p>
 				</section>
 
-				<nav>
-					<h1>페이저</h1>
+				<nav id="pager">
+					<h1 class="hidden">페이저</h1>
+					<p><a href="">이전</a></p>
 					<ul>
 						<li><a href="">1</a></li>
 						<li><a href="">2</a></li>
@@ -413,6 +451,7 @@ body {
 						<li><a href="">4</a></li>
 						<li><a href="">5</a></li>
 					</ul>
+					<p><a href="">다음</a></p>
 				</nav>
 			</section>
 			</main>
